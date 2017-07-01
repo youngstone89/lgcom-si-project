@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}SI Portal {% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap-theme.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap-theme.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap.min.css' %}" media='screen' />
+        <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/main.css' %}" media='screen' />
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        
+        <div class="container-narrow">
+            <ul class="nav nav-pills pull-right">
+                <li ><a href="/lgcom/index">Home</a></li>
+                <li ><a href="/lgcom/about">Getting Started</a></li>
+                
+                
+            </ul>
+            <h3><span class="glyphicon glyphicon-asterisk" style="color:#5cb85c"></span>Project Management Portal</h3>
+            <hr>
+            {% block content %}
+                
+            {% endblock %}
+            <div class="footer">
+                <p>&copy; LGCNS Marketing Platform Team 2017, System Integration </p>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'lgcom/js/dropdown-menu.js' %}"></script>
+        <script src="{% static 'lgcom/js/bootstrap.js' %}"></script>
+        <script src="{% static 'lgcom/js/bootstrap.min.js' %}"></script>
+    </html>
