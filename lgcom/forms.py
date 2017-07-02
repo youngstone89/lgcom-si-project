@@ -1,13 +1,21 @@
 from django.forms import ModelForm
 from .models import IPAddress
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django import forms
 
 
-class IPAaddressForm(ModelForm):
-	class Meta:
-		model = IPAddress
 
+class CreateUserForm(UserCreationForm):
+	email = forms.EmailField(required=True)
 
-class UserForm(ModelForm):
 	class Meta:
 		model = User
+		fields = ["username","email","password1","password2"]
+
+	def save(self, commit=True):
+		user = super(CreateUserForm, self).save(commit=False)
+		user.email = self.cleaned_data["email"]
+		if commit:
+			user.save()
+		return user

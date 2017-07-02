@@ -11,8 +11,4 @@ class IPAddress(models.Model):
 	def __str__(self):
 		return self.ip_address
 
-	def change_status(self):
-		if self.ip_status == True:
-			self.ip_status = False
-		else:
-			self.ip_status = True
+		

@@ -17,8 +17,15 @@
         
         <div class="container-narrow">
             <ul class="nav nav-pills pull-right">
-                <li ><a href="/lgcom/index">Home</a></li>
-                <li ><a href="/lgcom/about">Getting Started</a></li>
+                {% if user.is_active %}
+                    <li><a href="{% url 'login' %}"> <span class="glyphicon glyphicon-heart"></span> {{user.username}}</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}"> <span class="glyphicon glyphicon-user"></span> Login</a></li>
+                  
+                {% endif %}
+                <li ><a href="{% url 'index' %}">Home</a></li>
+                <li ><a href="{% url 'about' %}">Getting Started</a></li>
                 
                 
             </ul>
