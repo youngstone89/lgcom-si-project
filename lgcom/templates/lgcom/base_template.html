@@ -1,13 +1,12 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>{% block title %}SI Portal {% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap-theme.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap-theme.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/bootstrap.min.css' %}" media='screen' />
         <link rel="stylesheet" type="text/css" href="{% static 'lgcom/css/main.css' %}" media='screen' />
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
@@ -18,14 +17,14 @@
         <div class="container-narrow">
             <ul class="nav nav-pills pull-right">
                 {% if user.is_active %}
-                    <li><a href="{% url 'login' %}"> <span class="glyphicon glyphicon-heart"></span> {{user.username}}</a></li>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><a href="{% url 'lgcom:login' %}"> <span class="glyphicon glyphicon-heart"></span> {{user.username}}</a></li>
+                    <li><a href="{% url 'lgcom:logout' %}">Logout</a></li>
                 {% else %}
-                    <li><a href="{% url 'login' %}"> <span class="glyphicon glyphicon-user"></span> Login</a></li>
+                    <li><a href="{% url 'lgcom:login' %}"> <span class="glyphicon glyphicon-user"></span> Login</a></li>
                   
                 {% endif %}
-                <li ><a href="{% url 'index' %}">Home</a></li>
-                <li ><a href="{% url 'about' %}">Getting Started</a></li>
+                <li ><a href="{% url 'lgcom:index' %}">Home</a></li>
+                <li ><a href="{% url 'lgcom:get_start' %}">Getting Started</a></li>
                 
                 
             </ul>

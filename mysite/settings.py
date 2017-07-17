@@ -83,16 +83,28 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 
 #connection with mysql using mysqlclient that has been installed in site-packages in virtualenv
+# DATABASES = {
+#     'default': {
+#         'ENGINE':'django.db.backends.mysql',
+#         'NAME':'xe',
+#         'USER':'youngstone89',
+#         'PASSWORD':'pw525094**',
+#         'HOST':'localhost',
+#         'PORT':'3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE':'django.db.backends.mysql',
-        'NAME':'xe',
-        'USER':'youngstone89',
-        'PASSWORD':'pw525094**',
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME':'test1',
+        'USER':'postgres',
+        'PASSWORD':'wldndkQk2017',
         'HOST':'localhost',
-        'PORT':'3306',
+        'PORT':'5432',
     }
 }
+
 
 
 # Password validation
@@ -132,5 +144,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/lgcom/'
+LOGIN_REDIRECT_URL = '/lgcom/'
+AUTH_USER_MODEL = 'lgcom.MyUser'
