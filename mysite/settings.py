@@ -147,3 +147,11 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/lgcom/'
 LOGIN_REDIRECT_URL = '/lgcom/'
 AUTH_USER_MODEL = 'lgcom.MyUser'
+
+#SMTP SERVER SETUP
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'yourID'
+EMAIL_HOST_PASSWORD = 'yourPassword'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'DO NOT REPLY <lgcomsiproject@gmail.com>'
