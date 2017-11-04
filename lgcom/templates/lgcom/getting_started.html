@@ -1,0 +1,87 @@
+{% extends 'lgcom/base_template.html' %}
+{% block content %}
+	<meta charset="utf-8">
+
+	<style>
+	body {
+	position: relative;
+	}
+	#section1 {padding-top:relative;height:relative;color: #fff; background-color: #1E88E5;}
+	#section2 {padding-top:relative;height:relative;color: #fff; background-color: #673ab7;}
+	#section3 {padding-top:relative;height:relative;color: #fff; background-color: #ff9800;}
+	#section41 {padding-top:relative;height:relative;color: #fff; background-color: #00bcd4;}
+	#section42 {padding-top:relative;height:relative;color: #fff; background-color: #009688;}
+	</style>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					
+				</div>
+				<div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">IP Allocation <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#section1">Get your IP</a></li>
+								<li><a href="#section2">Find your IP</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Office Plus <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Get your account</a></li>
+							<li><a href="#">Recover your account</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Active Directory <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Get your Active Directory Account</a></li>
+						<li><a href="#">Extend your AD account expiration</a></li>
+						<li><a href="#">How to convert to Active Directory?</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Need Authorization? <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">CMS: Content Managment System</a></li>
+					<li><a href="#">SVN Repository and Account</a></li>
+					<li><a href="#">Database Access</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+</div>
+</nav>
+<div id="section1" class="container-fluid">
+<h1><a class="" href="{% url 'lgcom:ip_list' %}">Get your IP</a></h1>
+<p>본 사업장에서 인터넷을 사용하기 위해서는 신청을 통해 할당된 IP주소를 사용하여야 합니다. </p>
+<p></p>
+</div>
+<div id="section2" class="container-fluid">
+<h1>Section 2</h1>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section3" class="container-fluid">
+<h1>Section 3</h1>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section41" class="container-fluid">
+<h1>Section 4 Submenu 1</h1>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section42" class="container-fluid">
+<h1>Section 4 Submenu 2</h1>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+</body>
+{% endblock %}
