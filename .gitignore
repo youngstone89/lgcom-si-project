@@ -9,15 +9,24 @@
 
 # only ignore the TODO file in the current directory, not subdir/TODO ex) /TODO
 
-
 # ignore all files in the build/ directory ex) build/
 lgcom/migrations/
 myvenv/
 
 # ignore doc/notes.txt, but not doc/server/arch.txt ex) doc/*.txt
 
+.DS_STORE
 
-# ignore all .pdf files in the doc/ directory ex) doc/**/*.pdf
+# Virtualenv related
+bin/
+include/
+pip-selfcheck.json
+
+# Django related 
+# src/<yourproject>/settings/local.py
+# static-cdn/  # any collected static files 
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -43,7 +52,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
