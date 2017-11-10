@@ -97,9 +97,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql',
-        'NAME':'test1',
+        'NAME':'test5',
         'USER':'postgres',
-        'PASSWORD':'yourPASSWORD',
+        'PASSWORD':'wldndkQk2017',
         'HOST':'localhost',
         'PORT':'5432',
     }
@@ -151,7 +151,7 @@ AUTH_USER_MODEL = 'lgcom.MyUser'
 #SMTP SERVER SETUP
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'yourID'
-EMAIL_HOST_PASSWORD = 'yourPassword'
+EMAIL_HOST_USER = 'lgcomsiproject@gmail.com'
+EMAIL_HOST_PASSWORD = '5t4r3e2w1q'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'DO NOT REPLY <lgcomsiproject@gmail.com>'

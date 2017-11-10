@@ -10,8 +10,8 @@
 # only ignore the TODO file in the current directory, not subdir/TODO ex) /TODO
 
 # ignore all files in the build/ directory ex) build/
-lgcom/migrations/
-myvenv/
+lgcom/migrations
+
 
 # ignore doc/notes.txt, but not doc/server/arch.txt ex) doc/*.txt
 
@@ -117,6 +117,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+myvenv/
 
 # Spyder project settings
 .spyderproject

@@ -18,7 +18,7 @@ class MyUserManager(BaseUserManager):
 			raise ValueError("비밀번호를 입력하시오")
 
 		user = self.model(
-			email=self.normalize_email(email),
+			email=self.normalize_email(self.email),
 			username=username,
 			password=password,)
 
