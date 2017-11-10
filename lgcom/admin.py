@@ -47,7 +47,7 @@ def update_master_table(modeladmin, request, queryset):
 update_master_table.short_description = "Update Master Table with the lastest file"
 
 
-from .models import PartnerResourceState, Project, Contract, ContractMember, IPAddress
+from .models import PartnerResourceState, Project, Contract, ContractMember
 
 class PartnerResourceStateAdmin(admin.ModelAdmin):
 
@@ -75,4 +75,3 @@ admin.site.register(PartnerResourceState,PartnerResourceStateAdmin)
 admin.site.register(Project,ProjectAdmin)
 admin.site.register(Contract,ContractAdmin)
 admin.site.register(ContractMember,ContractMemberAdmin)
-admin.site.register(IPAddress)

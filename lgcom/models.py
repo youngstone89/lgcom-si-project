@@ -132,15 +132,15 @@ class PartnerResourceState(models.Model):
 
 
 class Project(models.Model):
-	pjt_code = models.CharField(max_length=100, primary_key=True)
-	pjt_name = models.CharField(max_length=100)
+	pjt_code = models.CharField(max_length=100, primary_key=True,blank=True)
+	pjt_name = models.CharField(max_length=100,blank=True)
 
 	def __str__(self):
 		return "{0}{1}{2}".format(self.pjt_code,"-",self.pjt_name)
 
 class Contract(models.Model):
-	crt_code = models.CharField(max_length=100, primary_key=True)
-	crt_name = models.CharField(max_length=100)
+	crt_code = models.CharField(max_length=100,primary_key=True, blank=True)
+	crt_name = models.CharField(max_length=100, null=True)
 	project = models.ForeignKey(Project,to_field='pjt_code', null=True)
 
 
@@ -149,8 +149,8 @@ class Contract(models.Model):
 
 class ContractMember(models.Model):
 
-	kor_name_crt_period_level = models.CharField(max_length=200, primary_key=True)
-	ptr_cpny = models.CharField(max_length=100)
+	kor_name_crt_period_level = models.CharField(max_length=200, primary_key=True, blank=True)
+	ptr_cpny = models.CharField(max_length=100, blank=True)
 	man_month = models.DecimalField(decimal_places=1,max_digits=3)
 	price = models.PositiveIntegerField(default=0.0)
 	contract=models.ForeignKey(Contract,to_field='crt_code', null=True)
@@ -158,9 +158,9 @@ class ContractMember(models.Model):
 	def __str__(self):
 		return "{0}".format(self.kor_name_crt_period_level)
 
-class IPAddress(models.Model):
+# class IPAddress(models.Model):
 
-	ipaddress = models.GenericIPAddressField(primary_key=True,protocol='IPv4')
-	occupant = models.ForeignKey(MyUser,to_field='email', related_name='occupants',null=True)
-	def __str__(self):
-		return "{0}".format(self.ipaddress)
+# 	ipaddress = models.GenericIPAddressField(primary_key=True,protocol='IPv4')
+# 	occupant = models.ForeignKey(MyUser,to_field='email', related_name='occupants',null=True)
+# 	def __str__(self):
+# 		return "{0}".format(self.ipaddress)

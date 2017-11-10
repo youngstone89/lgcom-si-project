@@ -1,4 +1,5 @@
 # : comments
+*.py
 
 # no .a files
 *.sqlite3
